@@ -222,7 +222,7 @@ body {
   transition: color .15s ease; }
 
 .reveal a:hover {
-  color: #64C0D1;
+  text-decoration: underline;
   text-shadow: none;
   border: none; }
 
@@ -270,3 +270,64 @@ body {
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+/*********************************************
+ * CUSTOM SLIDES
+ *********************************************/
+
+#slide-title ul {
+    display: block;
+    list-style-type: none;
+    margin: 3em auto 1em;;
+    font-size: .875em;
+}
+
+#slide-installing-local-01,
+#slide-installing-local-02,
+#slide-installing-local-03,
+#slide-installing-local-04,
+#slide-local-parts-01,
+#slide-local-parts-02,
+#slide-local-parts-03,
+#slide-local-parts-04,
+#slide-creating-site-01,
+#slide-creating-site-02 {
+    width: 45%;
+    margin-left: 0px;
+    font-size: .75em;
+    color: black;
+}
+#slide-installing-local-01 h3,
+#slide-installing-local-02 h3,
+#slide-installing-local-03 h3,
+#slide-installing-local-04 h3,
+#slide-local-parts-01 h3,
+#slide-local-parts-02 h3,
+#slide-local-parts-03 h3,
+#slide-local-parts-04 h3,
+#slide-creating-site-01 h3,
+#slide-creating-site-02 h3 {
+    color: black;
+}
+
+#slide-local-parts-01,
+#slide-local-parts-02,
+#slide-local-parts-03,
+#slide-local-parts-04 {
+    margin-top: 80px;
+}
+
+#slide-local-parts-01 h3,
+#slide-local-parts-02 h3,
+#slide-local-parts-03 h3,
+#slide-local-parts-04 h3 {
+    font-size: 1.85em;
+}
+
+#slide-im-a-developer {
+    width: 300%;
+    margin-left: -100%;
+    background-color: rgba(0,0,0,.875);
+    padding-top: 2em;
+    padding-bottom: 2em;
+}

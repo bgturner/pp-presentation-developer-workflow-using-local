@@ -1,0 +1,306 @@
+#+OPTIONS: num:nil toc:nil reveal_title_slide:nil
+#+REVEAL_ROOT: https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/
+#+REVEAL_TRANS: Fade
+#+REVEAL_THEME: none
+#+REVEAL_EXTRA_CSS: assets/styles.css
+#+REVEAL_DEFAULT_SLIDE_BACKGROUND_SIZE: 1400px
+#+REVEAL_HLEVEL: 1
+#+TITLE: Developer Workflow Using Local
+#+Author: Benjamin Turner
+
+* Developer Workflow Using Local
+  :PROPERTIES:
+  :CUSTOM_ID: title
+  :END:
+
+  - Benjamin Turner
+  - [[https://passionsplay.com][https://passionsplay.com]]
+  - [[https://github.com/bgturner]]
+
+* What is Local?
+
+** 
+  A tool for managing WordPress sites on your local computer.
+
+* Create New Site
+
+** 
+   :PROPERTIES:
+   :reveal_background: assets/images/create-new-site-01.png
+   :END:
+
+** 
+   :PROPERTIES:
+   :reveal_background: assets/images/create-new-site-02.png
+   :END:
+
+** 
+   :PROPERTIES:
+   :reveal_background: assets/images/create-new-site-03.png
+   :END:
+
+** 
+   :PROPERTIES:
+   :reveal_background: assets/images/create-new-site-04.png
+   :END:
+
+** 
+   :PROPERTIES:
+   :reveal_background: assets/images/create-new-site-05.png
+   :END:
+
+** 
+   :PROPERTIES:
+   :reveal_background: assets/images/create-new-site-06.png
+   :END:
+
+** 
+   :PROPERTIES:
+   :reveal_background: assets/images/create-new-site-07.png
+   :END:
+
+** Blueprints
+   Create a site from a snapshot
+
+*** 
+    :PROPERTIES:
+    :reveal_background: assets/images/create-from-blueprint.png
+    :END:
+
+* Export Site
+** 
+   :PROPERTIES:
+   :reveal_background: assets/images/export-01.png
+   :END:
+
+** 
+   :PROPERTIES:
+   :reveal_background: assets/images/export-02.png
+   :END:
+
+** 
+   :PROPERTIES:
+   :reveal_background: assets/images/export-03.png
+   :END:
+
+* Push/Pull to Flywheel
+
+** 
+   :PROPERTIES:
+   :reveal_background: assets/images/connect-push-01.png
+   :END:
+
+** 
+   :PROPERTIES:
+   :reveal_background: assets/images/connect-push-02.png
+   :END:
+
+* But I'm a "Developer"
+   :PROPERTIES:
+   :reveal_background: assets/images/terminal-wall-of-text.png
+   :reveal_background_size: 3000px
+   :CUSTOM_ID: im-a-developer
+   :END:
+
+  Where's the black screen and cryptic terminal commands?
+
+** They're Here!
+*** 
+   :PROPERTIES:
+   :reveal_background: assets/images/open-site-ssh.png
+   :END:
+
+*** 
+   :PROPERTIES:
+   :reveal_background: assets/images/open-site-ssh-02.png
+   :END:
+
+** Cool, but...
+   - That's no different than what I'm already doing
+   - It's only for one site
+
+* Local? Docker? Containers? Machines?
+
+** What /really/ is Local?
+   - Is an Electron app
+   - Coordinates Docker Containers
+   - Is focused on managing WordPress sites
+
+** Think of Local as...
+   :PROPERTIES:
+   :reveal_background: assets/images/local-parts-01.jpeg
+   :CUSTOM_ID: local-parts-01
+   :END:
+   
+    A Producer
+
+    Local doesn't do much directly, it delegates a lot of the details
+
+    We tell Local to "Create a Site" and Local lines up the talent to make it happen.
+
+** WordPress
+   :PROPERTIES:
+   :reveal_background: assets/images/local-parts-02.jpeg
+   :CUSTOM_ID: local-parts-02
+   :END:
+   
+    Is a star actor, but has "specific" needs.
+
+    - PHP
+    - MySQL
+    - NGINX/Apache
+    - Varnish
+    - ...
+
+** Docker
+   :PROPERTIES:
+   :reveal_background: assets/images/local-parts-03.jpeg
+   :CUSTOM_ID: local-parts-03
+   :END:
+   
+    Co-ordinates and runs each individual WordPress site.
+
+    Each site that Docker runs is called a *container*.
+
+** Virtual Box
+   :PROPERTIES:
+   :reveal_background: assets/images/local-parts-04.jpeg
+   :CUSTOM_ID: local-parts-04
+   :END:
+   
+    Creates the general environment for running Docker containers (local sites).
+
+    This environment is called a *Virtual Machine* (VM)
+
+    VirtualBox creates the VM for Local, and names is =local-by-flywheel=
+
+** Installing Local
+   :PROPERTIES:
+   :reveal_background: assets/images/installing-local-01.jpeg
+   :CUSTOM_ID: installing-local-01
+   :END:
+   
+    - User downloads and installs Local
+
+** Installing Local
+   :PROPERTIES:
+   :reveal_background: assets/images/installing-local-02.jpeg
+   :CUSTOM_ID: installing-local-02
+   :END:
+   
+    - Local downloads & installs VirtualBox
+
+** Installing Local
+   :PROPERTIES:
+   :reveal_background: assets/images/installing-local-03.jpeg
+   :CUSTOM_ID: installing-local-03
+   :END:
+   
+    - Local has VB create a Virtual Machine
+
+** Installing Local
+   :PROPERTIES:
+   :reveal_background: assets/images/installing-local-04.jpeg
+   :CUSTOM_ID: installing-local-04
+   :END:
+
+    - VB finishes creating the VM by installing Docker inside the VM
+
+** Creating a Site
+   :PROPERTIES:
+   :reveal_background: assets/images/local-creating-site-01.jpeg
+   :CUSTOM_ID: creating-site-01
+   :END:
+
+    - Local tells Docker to create a new WordPress site
+
+** Creating a Site
+   :PROPERTIES:
+   :reveal_background: assets/images/local-creating-site-02.jpeg
+   :CUSTOM_ID: creating-site-01
+   :END:
+
+    - Each new site is another container
+
+* Docker and Local
+  We can start dabbling with Docker using the version that comes bundled with Local.
+
+  To work with Local's WordPress sites, we need to set our context to be the the =local-by-flywheel= Virtual Machine.
+
+*** How?
+
+*** 
+    :PROPERTIES:
+    :reveal_background: assets/images/setup-docker-environment.png
+    :END:
+
+* Using Docker
+
+** Listing Containers
+
+#+BEGIN_SRC shell
+docker ps | less -S
+#+END_SRC
+
+  - [[https://docs.docker.com/engine/reference/commandline/ps/][https://docs.docker.com/engine/reference/commandline/ps/]]
+
+*** 
+    :PROPERTIES:
+    :reveal_background: assets/images/docker-ps.png
+    :END:
+
+** Inspecting Containers
+
+#+BEGIN_SRC shell
+docker inspect <container-id>
+#+END_SRC
+
+  - [[https://docs.docker.com/engine/reference/commandline/inspect/][https://docs.docker.com/engine/reference/commandline/inspect/]]
+
+*** 
+    :PROPERTIES:
+    :reveal_background: assets/images/docker-inspect.png
+    :END:
+
+* So What
+
+** WP-CLI
+
+   =wp-cli= allows us to operate on a remote system using the =--ssh= argument.
+
+   In this case, our Docker containers are "remote systems" from our laptop.
+
+*** Docs:
+
+#+BEGIN_SRC shell
+  --ssh=[<scheme>:][<user>@]<host|container>[:<port>][<path>]
+      Perform operation against a remote server over SSH
+      (or a container using scheme of "docker",
+      "docker-compose", "vagrant").
+#+END_SRC
+
+  - [[https://make.wordpress.org/cli/handbook/running-commands-remotely/][https://make.wordpress.org/cli/handbook/running-commands-remotely/]]
+
+* Case Study
+   List the installed themes for all running sites.
+
+** Breaking It Down
+  We need to do two things:
+  - Get a list of running WordPress containers
+  - Do something within each container
+
+** 
+   :PROPERTIES:
+   :reveal_background: assets/images/docker-ps-filter-wordpress-containers.png
+   :END:
+
+** 
+   :PROPERTIES:
+   :reveal_background: assets/images/bash-loop-docker.png
+   :END:
+
+** 
+   :PROPERTIES:
+   :reveal_background: assets/images/bash-loop-docker-02.png
+   :END:
+

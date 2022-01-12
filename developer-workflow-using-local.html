@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Developer Workflow Using Local</title>
+<meta name="author" content="(Benjamin Turner)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/moon.css" id="theme"/>
+
+<link rel="stylesheet" href="assets/styles.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/obsidian.min.css"/>
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<section>
+<section id="slide-title" data-background-size="1400px">
+<h2 id="title">Developer Workflow Using Local</h2>
+<ul>
+<li>Benjamin Turner</li>
+<li><a href="https://passionsplay.com">https://passionsplay.com</a></li>
+<li><a href="https://github.com/bgturner">https://github.com/bgturner</a></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org8af0153" data-background-size="1400px">
+<h2 id="org8af0153">What is Local?</h2>
+<div class="outline-text-2" id="text-org8af0153">
+</div>
+</section>
+<section id="slide-org2520d1e" data-background-size="1400px">
+<h3 id="org2520d1e"></h3>
+<p>
+A tool for managing WordPress sites on your local computer.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org2e710d2" data-background-size="1400px">
+<h2 id="org2e710d2">Create New Site</h2>
+<div class="outline-text-2" id="text-org2e710d2">
+</div>
+</section>
+<section id="slide-orgf097d44" data-background="assets/images/create-new-site-01.png" data-background-size="1400px">
+<h3 id="orgf097d44"></h3>
+
+</section>
+<section id="slide-org7f44463" data-background="assets/images/create-new-site-02.png" data-background-size="1400px">
+<h3 id="org7f44463"></h3>
+
+</section>
+<section id="slide-orgc7c6af6" data-background="assets/images/create-new-site-03.png" data-background-size="1400px">
+<h3 id="orgc7c6af6"></h3>
+
+</section>
+<section id="slide-orge887970" data-background="assets/images/create-new-site-04.png" data-background-size="1400px">
+<h3 id="orge887970"></h3>
+
+</section>
+<section id="slide-org33e28e0" data-background="assets/images/create-new-site-05.png" data-background-size="1400px">
+<h3 id="org33e28e0"></h3>
+
+</section>
+<section id="slide-org009d006" data-background="assets/images/create-new-site-06.png" data-background-size="1400px">
+<h3 id="org009d006"></h3>
+
+</section>
+<section id="slide-org5fafb47" data-background="assets/images/create-new-site-07.png" data-background-size="1400px">
+<h3 id="org5fafb47"></h3>
+
+</section>
+<section id="slide-orgff9d59c" data-background-size="1400px">
+<h3 id="orgff9d59c">Blueprints</h3>
+<p>
+Create a site from a snapshot
+</p>
+
+</section>
+<section id="slide-orgdfe6429" data-background="assets/images/create-from-blueprint.png" data-background-size="1400px">
+<h4 id="orgdfe6429"></h4>
+
+</section>
+</section>
+<section>
+<section id="slide-org1529771" data-background-size="1400px">
+<h2 id="org1529771">Export Site</h2>
+<div class="outline-text-2" id="text-org1529771">
+</div>
+</section>
+<section id="slide-org1147fa0" data-background="assets/images/export-01.png" data-background-size="1400px">
+<h3 id="org1147fa0"></h3>
+
+</section>
+<section id="slide-org85298e6" data-background="assets/images/export-02.png" data-background-size="1400px">
+<h3 id="org85298e6"></h3>
+
+</section>
+<section id="slide-orgfd1321e" data-background="assets/images/export-03.png" data-background-size="1400px">
+<h3 id="orgfd1321e"></h3>
+
+</section>
+</section>
+<section>
+<section id="slide-orgbdc6f94" data-background-size="1400px">
+<h2 id="orgbdc6f94">Push/Pull to Flywheel</h2>
+<div class="outline-text-2" id="text-orgbdc6f94">
+</div>
+</section>
+<section id="slide-org967ccc1" data-background="assets/images/connect-push-01.png" data-background-size="1400px">
+<h3 id="org967ccc1"></h3>
+
+</section>
+<section id="slide-org62e8060" data-background="assets/images/connect-push-02.png" data-background-size="1400px">
+<h3 id="org62e8060"></h3>
+
+</section>
+</section>
+<section>
+<section id="slide-im-a-developer" data-background="assets/images/terminal-wall-of-text.png" data-background-size="3000px">
+<h2 id="im-a-developer">But I'm a "Developer"</h2>
+<p>
+Where's the black screen and cryptic terminal commands?
+</p>
+
+</section>
+<section id="slide-orgd10066e" data-background-size="1400px">
+<h3 id="orgd10066e">They're Here!</h3>
+<div class="outline-text-3" id="text-orgd10066e">
+</div>
+</section>
+<section id="slide-org190580c" data-background="assets/images/open-site-ssh.png" data-background-size="1400px">
+<h4 id="org190580c"></h4>
+
+</section>
+<section id="slide-org9697635" data-background="assets/images/open-site-ssh-02.png" data-background-size="1400px">
+<h4 id="org9697635"></h4>
+
+</section>
+<section id="slide-org4c48d36" data-background-size="1400px">
+<h3 id="org4c48d36">Cool, but&#x2026;</h3>
+<ul>
+<li>That's no different than what I'm already doing</li>
+<li>It's only for one site</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org99efc3e" data-background-size="1400px">
+<h2 id="org99efc3e">Local? Docker? Containers? Machines?</h2>
+<div class="outline-text-2" id="text-org99efc3e">
+</div>
+</section>
+<section id="slide-org001e762" data-background-size="1400px">
+<h3 id="org001e762">What <i>really</i> is Local?</h3>
+<ul>
+<li>Is an Electron app</li>
+<li>Coordinates Docker Containers</li>
+<li>Is focused on managing WordPress sites</li>
+
+</ul>
+
+</section>
+<section id="slide-local-parts-01" data-background="assets/images/local-parts-01.jpeg" data-background-size="1400px">
+<h3 id="local-parts-01">Think of Local as&#x2026;</h3>
+<p>
+A Producer
+</p>
+
+<p>
+Local doesn't do much directly, it delegates a lot of the details
+</p>
+
+<p>
+We tell Local to "Create a Site" and Local lines up the talent to make it happen.
+</p>
+
+</section>
+<section id="slide-local-parts-02" data-background="assets/images/local-parts-02.jpeg" data-background-size="1400px">
+<h3 id="local-parts-02">WordPress</h3>
+<p>
+Is a star actor, but has "specific" needs.
+</p>
+
+<ul>
+<li>PHP</li>
+<li>MySQL</li>
+<li>NGINX/Apache</li>
+<li>Varnish</li>
+<li>&#x2026;</li>
+
+</ul>
+
+</section>
+<section id="slide-local-parts-03" data-background="assets/images/local-parts-03.jpeg" data-background-size="1400px">
+<h3 id="local-parts-03">Docker</h3>
+<p>
+Co-ordinates and runs each individual WordPress site.
+</p>
+
+<p>
+Each site that Docker runs is called a <b>container</b>.
+</p>
+
+</section>
+<section id="slide-local-parts-04" data-background="assets/images/local-parts-04.jpeg" data-background-size="1400px">
+<h3 id="local-parts-04">Virtual Box</h3>
+<p>
+Creates the general environment for running Docker containers (local sites).
+</p>
+
+<p>
+This environment is called a <b>Virtual Machine</b> (VM)
+</p>
+
+<p>
+VirtualBox creates the VM for Local, and names is <code>local-by-flywheel</code>
+</p>
+
+</section>
+<section id="slide-installing-local-01" data-background="assets/images/installing-local-01.jpeg" data-background-size="1400px">
+<h3 id="installing-local-01">Installing Local</h3>
+<ul>
+<li>User downloads and installs Local</li>
+
+</ul>
+
+</section>
+<section id="slide-installing-local-02" data-background="assets/images/installing-local-02.jpeg" data-background-size="1400px">
+<h3 id="installing-local-02">Installing Local</h3>
+<ul>
+<li>Local downloads &amp; installs VirtualBox</li>
+
+</ul>
+
+</section>
+<section id="slide-installing-local-03" data-background="assets/images/installing-local-03.jpeg" data-background-size="1400px">
+<h3 id="installing-local-03">Installing Local</h3>
+<ul>
+<li>Local has VB create a Virtual Machine</li>
+
+</ul>
+
+</section>
+<section id="slide-installing-local-04" data-background="assets/images/installing-local-04.jpeg" data-background-size="1400px">
+<h3 id="installing-local-04">Installing Local</h3>
+<ul>
+<li>VB finishes creating the VM by installing Docker inside the VM</li>
+
+</ul>
+
+</section>
+<section id="slide-creating-site-01" data-background="assets/images/local-creating-site-01.jpeg" data-background-size="1400px">
+<h3 id="creating-site-01">Creating a Site</h3>
+<ul>
+<li>Local tells Docker to create a new WordPress site</li>
+
+</ul>
+
+</section>
+<section id="slide-creating-site-01" data-background="assets/images/local-creating-site-02.jpeg" data-background-size="1400px">
+<h3 id="creating-site-01">Creating a Site</h3>
+<ul>
+<li>Each new site is another container</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org1190912" data-background-size="1400px">
+<h2 id="org1190912">Docker and Local</h2>
+<p>
+We can start dabbling with Docker using the version that comes bundled with Local.
+</p>
+
+<p>
+To work with Local's WordPress sites, we need to set our context to be the the <code>local-by-flywheel</code> Virtual Machine.
+</p>
+
+</section>
+<section id="slide-orgef78fb8" data-background-size="1400px">
+<h4 id="orgef78fb8">How?</h4>
+
+</section>
+<section id="slide-orge73965b" data-background="assets/images/setup-docker-environment.png" data-background-size="1400px">
+<h4 id="orge73965b"></h4>
+
+</section>
+</section>
+<section>
+<section id="slide-org00aefc9" data-background-size="1400px">
+<h2 id="org00aefc9">Using Docker</h2>
+<div class="outline-text-2" id="text-org00aefc9">
+</div>
+</section>
+<section id="slide-org8c3596a" data-background-size="1400px">
+<h3 id="org8c3596a">Listing Containers</h3>
+<div class="org-src-container">
+
+<pre   ><code class="shell" >docker ps | less -S
+</code></pre>
+</div>
+
+<ul>
+<li><a href="https://docs.docker.com/engine/reference/commandline/ps/">https://docs.docker.com/engine/reference/commandline/ps/</a></li>
+
+</ul>
+
+</section>
+<section id="slide-orgf8c189f" data-background="assets/images/docker-ps.png" data-background-size="1400px">
+<h4 id="orgf8c189f"></h4>
+
+</section>
+<section id="slide-orge93497d" data-background-size="1400px">
+<h3 id="orge93497d">Inspecting Containers</h3>
+<div class="org-src-container">
+
+<pre   ><code class="shell" >docker inspect &lt;container-id&gt;
+</code></pre>
+</div>
+
+<ul>
+<li><a href="https://docs.docker.com/engine/reference/commandline/inspect/">https://docs.docker.com/engine/reference/commandline/inspect/</a></li>
+
+</ul>
+
+</section>
+<section id="slide-org0841bc2" data-background="assets/images/docker-inspect.png" data-background-size="1400px">
+<h4 id="org0841bc2"></h4>
+
+</section>
+</section>
+<section>
+<section id="slide-orgf814f40" data-background-size="1400px">
+<h2 id="orgf814f40">So What</h2>
+<div class="outline-text-2" id="text-orgf814f40">
+</div>
+</section>
+<section id="slide-org790e380" data-background-size="1400px">
+<h3 id="org790e380">WP-CLI</h3>
+<p>
+<code>wp-cli</code> allows us to operate on a remote system using the <code>--ssh</code> argument.
+</p>
+
+<p>
+In this case, our Docker containers are "remote systems" from our laptop.
+</p>
+
+</section>
+<section id="slide-org6e74016" data-background-size="1400px">
+<h4 id="org6e74016">Docs:</h4>
+<div class="org-src-container">
+
+<pre   ><code class="shell" >--ssh=[&lt;scheme&gt;:][&lt;user&gt;@]&lt;host|container&gt;[:&lt;port&gt;][&lt;path&gt;]
+    Perform operation against a remote server over SSH
+    (or a container using scheme of "docker",
+    "docker-compose", "vagrant").
+</code></pre>
+</div>
+
+<ul>
+<li><a href="https://make.wordpress.org/cli/handbook/running-commands-remotely/">https://make.wordpress.org/cli/handbook/running-commands-remotely/</a></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgcb938e3" data-background-size="1400px">
+<h2 id="orgcb938e3">Case Study</h2>
+<p>
+List the installed themes for all running sites.
+</p>
+
+</section>
+<section id="slide-org1531f9e" data-background-size="1400px">
+<h3 id="org1531f9e">Breaking It Down</h3>
+<p>
+We need to do two things:
+</p>
+<ul>
+<li>Get a list of running WordPress containers</li>
+<li>Do something within each container</li>
+
+</ul>
+
+</section>
+<section id="slide-orga1a47db" data-background="assets/images/docker-ps-filter-wordpress-containers.png" data-background-size="1400px">
+<h3 id="orga1a47db"></h3>
+
+</section>
+<section id="slide-orga145f18" data-background="assets/images/bash-loop-docker.png" data-background-size="1400px">
+<h3 id="orga145f18"></h3>
+
+</section>
+<section id="slide-org9695adc" data-background="assets/images/bash-loop-docker-02.png" data-background-size="1400px">
+<h3 id="org9695adc"></h3>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+hash: true, history: true,
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }]
+
+});
+
+</script>
+</body>
+</html>

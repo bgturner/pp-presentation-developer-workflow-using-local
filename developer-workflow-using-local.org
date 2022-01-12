@@ -1,10 +1,10 @@
 #+OPTIONS: num:nil toc:nil reveal_title_slide:nil
-#+REVEAL_ROOT: https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/
-#+REVEAL_TRANS: Fade
-#+REVEAL_THEME: none
+#+REVEAL_PLUGINS: (highlight)
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+REVEAL_HIGHLIGHT_CSS: https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/obsidian.min.css
+#+REVEAL_INIT_OPTIONS: hash: true, history: true
 #+REVEAL_EXTRA_CSS: assets/styles.css
 #+REVEAL_DEFAULT_SLIDE_BACKGROUND_SIZE: 1400px
-#+REVEAL_HLEVEL: 1
 #+TITLE: Developer Workflow Using Local
 #+Author: Benjamin Turner
 
